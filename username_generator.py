@@ -7,9 +7,37 @@
 #   Max Verstappen
 #   Lewis Hamilton
 #   and so on ....
+# Script built to create a list of usernames to be used in bruteforcing attacks. Specially useful in conjunction with Kerbrute
 
+# usage: username_generator.py [-h] -w wordlist [-u]
 
+# optional arguments:
+#   -h, --help            show this help message and exit
+#   -w wordlist, --wordlist wordlist
+#                         Specify path to the wordlist
+#   -u, --uppercase       Also produce uppercase permutations. Disabled by default
 
+# Example wordlist
+
+# root@kali:# cat example_wordlist.lst 
+# John Lennon
+# Lewis Hamilton
+# Iron Man
+
+# Example output with lowercase permutations only
+# root@kali:# python3 username_generator.py -w example_wordlist.lst 
+
+# john
+# lennon
+# j.lennon
+# j-lennon
+# j_lennon
+# j+lennon
+# jlennon
+# lennonjohn
+
+# Example output with lowercase and uppercase permutations
+# root@kali:# python3 username_generator.py -w example_wordlist.lst --uppercase
 
 import argparse
 
